@@ -19,19 +19,19 @@
                 "tier": "Premium"
             }
         },
-        {
-            "name": "myubuntuvm",
-            "type": "storage2",
-            "apiVersion": "2021-04-01",
-            "location": "[resourceGroup().location]",
-            "tags": {
-                "displayName": "ubuntuVM1 Storage Account"
-            },
-            "sku": {
-                "name": "Standard_LRS"
-            },
-            "kind": "Storage"
-        },
+        // {
+        //     // "name": "myubuntuvm",
+        //     // "type": "storage2",
+        //     // "apiVersion": "2021-04-01",
+        //     // "location": "[resourceGroup().location]",
+        //     // "tags": {
+        //     //     "displayName": "ubuntuVM1 Storage Account"
+        //     // },
+        //     // "sku": {
+        //     //     "name": "Standard_LRS"
+        //     // },
+        //     // "kind": "Storage"
+        // },
         {
             "name": "myubuntuip",
             "type": "Microsoft.Network/publicIPAddresses",
