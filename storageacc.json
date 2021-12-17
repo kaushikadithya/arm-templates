@@ -6,7 +6,7 @@
     "variables": {},
     "resources": [
         {
-            "name": "armdemotemplate",
+            "name": "Mystorage",
             "type": "Microsoft.Storage/storageAccounts",
             "apiVersion": "2021-04-01",
             "tags": {
@@ -20,8 +20,8 @@
             }
         },
         {
-            "name": "[toLower('ubuntuVM1storage')]",
-            "type": "Microsoft.Storage/storageAccounts",
+            "name": "myubuntuvm",
+            "type": "storage2",
             "apiVersion": "2021-04-01",
             "location": "[resourceGroup().location]",
             "tags": {
@@ -33,7 +33,7 @@
             "kind": "Storage"
         },
         {
-            "name": "ubuntuVM1-PublicIP",
+            "name": "myubuntuip",
             "type": "Microsoft.Network/publicIPAddresses",
             "apiVersion": "2020-11-01",
             "location": "[resourceGroup().location]",
@@ -48,7 +48,7 @@
             }
         },
         {
-            "name": "ubuntuVM1-nsg",
+            "name": "mynetsecapp",
             "type": "Microsoft.Network/networkSecurityGroups",
             "apiVersion": "2020-11-01",
             "location": "[resourceGroup().location]",
@@ -72,7 +72,7 @@
             }
         },
         {
-            "name": "ubuntuVM1-VirtualNetwork",
+            "name": "myubuntuvmnetwork",
             "type": "Microsoft.Network/virtualNetworks",
             "apiVersion": "2020-11-01",
             "location": "[resourceGroup().location]",
@@ -90,7 +90,7 @@
                 },
                 "subnets": [
                     {
-                        "name": "ubuntuVM1-VirtualNetwork-Subnet",
+                        "name": "myfirstsubnet",
                         "properties": {
                             "addressPrefix": "10.0.0.0/24",
                             "networkSecurityGroup": {
@@ -102,7 +102,7 @@
             }
         },
         {
-            "name": "ubuntuVM1-NetworkInterface",
+            "name": "myubuntunetint",
             "type": "Microsoft.Network/networkInterfaces",
             "apiVersion": "2020-11-01",
             "location": "[resourceGroup().location]",
@@ -131,7 +131,7 @@
             }
         },
         {
-            "name": "ubuntuVM1",
+            "name": "myvmmachine",
             "type": "Microsoft.Compute/virtualMachines",
             "apiVersion": "2021-03-01",
             "location": "[resourceGroup().location]",
