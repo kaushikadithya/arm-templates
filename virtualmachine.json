@@ -1,12 +1,5 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
-    "contentVersion": "1.0.0.0",
-    "parameters": {},
-    "functions": [],
-    "variables": {},
-    "resources": [
-        {
-    "name": "Databaseserver",
+    "name": "myfirstvm",
     "id": "/subscriptions/1d8064d3-8247-466f-a931-77025e2f08fa/resourceGroups/live-demo/providers/Microsoft.Compute/virtualMachines/Databaseserver",
     "type": "Microsoft.Compute/virtualMachines",
     "location": "centralus",
@@ -24,7 +17,7 @@
             },
             "osDisk": {
                 "osType": "Linux",
-                "name": "Databaseserver_OsDisk_1_7a9cad1d2189459e9d9484e946c18b86",
+                "name": "Myfirstvm_OsDisk_1_7a9cad1d2189459e9d9484e946c18b86",
                 "createOption": "FromImage",
                 "caching": "ReadWrite",
                 "managedDisk": {
@@ -34,7 +27,7 @@
             "dataDisks": []
         },
         "osProfile": {
-            "computerName": "Databaseserver",
+            "computerName": "Myfirstvm",
             "adminUsername": "Kaushik04",
             "linuxConfiguration": {
                 "disablePasswordAuthentication": false
@@ -56,7 +49,4 @@
     "zones": [
         "2"
     ]
-}
-    ],
-    "outputs": {}
 }
